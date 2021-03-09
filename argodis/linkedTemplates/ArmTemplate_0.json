@@ -47,7 +47,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/argodis')]",
+			"name": "[concat(parameters('factoryName'), '/input')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -81,7 +81,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/OutputSql')]",
+			"name": "[concat(parameters('factoryName'), '/output')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -102,7 +102,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/CopyPipeline')]",
+			"name": "[concat(parameters('factoryName'), '/pipeline')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -170,14 +170,14 @@
 						},
 						"inputs": [
 							{
-								"referenceName": "argodis",
+								"referenceName": "input",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
 						],
 						"outputs": [
 							{
-								"referenceName": "OutputSql",
+								"referenceName": "output",
 								"type": "DatasetReference",
 								"parameters": {}
 							}
@@ -187,8 +187,8 @@
 				"annotations": []
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/argodis')]",
-				"[concat(variables('factoryId'), '/datasets/OutputSql')]"
+				"[concat(variables('factoryId'), '/datasets/input')]",
+				"[concat(variables('factoryId'), '/datasets/output')]"
 			]
 		}
 	]
