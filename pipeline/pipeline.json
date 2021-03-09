@@ -1,5 +1,5 @@
 {
-	"name": "CopyPipeline",
+	"name": "pipeline",
 	"properties": {
 		"activities": [
 			{
@@ -65,13 +65,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "argodis",
+						"referenceName": "input",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "OutputSql",
+						"referenceName": "output",
 						"type": "DatasetReference"
 					}
 				]

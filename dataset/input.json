@@ -1,5 +1,5 @@
 {
-	"name": "argodis",
+	"name": "input",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureStorageLinkedService",

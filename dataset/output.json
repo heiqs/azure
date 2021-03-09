@@ -1,5 +1,5 @@
 {
-	"name": "OutputSql",
+	"name": "output",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureSqlDatabase",
